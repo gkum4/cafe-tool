@@ -44,7 +44,7 @@
 		0C7FC07A2BDDA72B003734BD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0C7FC07D2BDDA755003734BD /* CoffeeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDataModel.swift; sourceTree = "<group>"; };
 		0C7FC07F2BDDA90B003734BD /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
-		0C7FC0812BDDAAAE003734BD /* CafeTool.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CafeTool.xctestplan; sourceTree = "<group>"; };
+		0C7FC0812BDDAAAE003734BD /* Custom.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Custom.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		0C7FC03D2BDDA6C1003734BD = {
 			isa = PBXGroup;
 			children = (
-				0C7FC0812BDDAAAE003734BD /* CafeTool.xctestplan */,
+				0C7FC0812BDDAAAE003734BD /* Custom.xctestplan */,
 				0C7FC0482BDDA6C1003734BD /* CafeTool */,
 				0C7FC0592BDDA6C4003734BD /* CafeToolTests */,
 				0C7FC0472BDDA6C1003734BD /* Products */,
