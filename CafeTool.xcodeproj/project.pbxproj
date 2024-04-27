@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0C7FC04A2BDDA6C1003734BD /* CafeToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC0492BDDA6C1003734BD /* CafeToolApp.swift */; };
-		0C7FC04C2BDDA6C1003734BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC04B2BDDA6C1003734BD /* ContentView.swift */; };
 		0C7FC04E2BDDA6C4003734BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */; };
 		0C7FC0512BDDA6C4003734BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7FC0502BDDA6C4003734BD /* Preview Assets.xcassets */; };
-		0C7FC05B2BDDA6C4003734BD /* CafeToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC05A2BDDA6C4003734BD /* CafeToolTests.swift */; };
-		0C7FC0652BDDA6C4003734BD /* CafeToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC0642BDDA6C4003734BD /* CafeToolUITests.swift */; };
-		0C7FC0672BDDA6C4003734BD /* CafeToolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC0662BDDA6C4003734BD /* CafeToolUITestsLaunchTests.swift */; };
+		0C7FC0792BDDA726003734BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC0782BDDA726003734BD /* HomeView.swift */; };
+		0C7FC07B2BDDA72B003734BD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC07A2BDDA72B003734BD /* HomeViewModel.swift */; };
+		0C7FC07E2BDDA755003734BD /* CoffeeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC07D2BDDA755003734BD /* CoffeeDataModel.swift */; };
+		0C7FC0802BDDA90B003734BD /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC07F2BDDA90B003734BD /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,15 @@
 /* Begin PBXFileReference section */
 		0C7FC0462BDDA6C1003734BD /* CafeTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7FC0492BDDA6C1003734BD /* CafeToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeToolApp.swift; sourceTree = "<group>"; };
-		0C7FC04B2BDDA6C1003734BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7FC0502BDDA6C4003734BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C7FC0562BDDA6C4003734BD /* CafeToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C7FC05A2BDDA6C4003734BD /* CafeToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeToolTests.swift; sourceTree = "<group>"; };
 		0C7FC0602BDDA6C4003734BD /* CafeToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C7FC0642BDDA6C4003734BD /* CafeToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeToolUITests.swift; sourceTree = "<group>"; };
-		0C7FC0662BDDA6C4003734BD /* CafeToolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeToolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C7FC0782BDDA726003734BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0C7FC07A2BDDA72B003734BD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0C7FC07D2BDDA755003734BD /* CoffeeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDataModel.swift; sourceTree = "<group>"; };
+		0C7FC07F2BDDA90B003734BD /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		0C7FC0812BDDAAAE003734BD /* CafeTool.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CafeTool.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +75,9 @@
 		0C7FC03D2BDDA6C1003734BD = {
 			isa = PBXGroup;
 			children = (
+				0C7FC0812BDDAAAE003734BD /* CafeTool.xctestplan */,
 				0C7FC0482BDDA6C1003734BD /* CafeTool */,
 				0C7FC0592BDDA6C4003734BD /* CafeToolTests */,
-				0C7FC0632BDDA6C4003734BD /* CafeToolUITests */,
 				0C7FC0472BDDA6C1003734BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,8 +95,8 @@
 		0C7FC0482BDDA6C1003734BD /* CafeTool */ = {
 			isa = PBXGroup;
 			children = (
-				0C7FC0492BDDA6C1003734BD /* CafeToolApp.swift */,
-				0C7FC04B2BDDA6C1003734BD /* ContentView.swift */,
+				0C7FC0742BDDA709003734BD /* Core */,
+				0C7FC0732BDDA6FF003734BD /* Screens */,
 				0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */,
 				0C7FC04F2BDDA6C4003734BD /* Preview Content */,
 			);
@@ -113,18 +114,59 @@
 		0C7FC0592BDDA6C4003734BD /* CafeToolTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C7FC05A2BDDA6C4003734BD /* CafeToolTests.swift */,
+				0C7FC07F2BDDA90B003734BD /* HomeViewModelTests.swift */,
 			);
 			path = CafeToolTests;
 			sourceTree = "<group>";
 		};
-		0C7FC0632BDDA6C4003734BD /* CafeToolUITests */ = {
+		0C7FC0732BDDA6FF003734BD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0C7FC0642BDDA6C4003734BD /* CafeToolUITests.swift */,
-				0C7FC0662BDDA6C4003734BD /* CafeToolUITestsLaunchTests.swift */,
+				0C7FC0752BDDA712003734BD /* Home */,
 			);
-			path = CafeToolUITests;
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0C7FC0742BDDA709003734BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0C7FC0492BDDA6C1003734BD /* CafeToolApp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0C7FC0752BDDA712003734BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0C7FC07C2BDDA744003734BD /* Models */,
+				0C7FC0772BDDA71E003734BD /* ViewModel */,
+				0C7FC0762BDDA71B003734BD /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0C7FC0762BDDA71B003734BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C7FC0782BDDA726003734BD /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C7FC0772BDDA71E003734BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C7FC07A2BDDA72B003734BD /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C7FC07C2BDDA744003734BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C7FC07D2BDDA755003734BD /* CoffeeDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7FC04C2BDDA6C1003734BD /* ContentView.swift in Sources */,
+				0C7FC0792BDDA726003734BD /* HomeView.swift in Sources */,
 				0C7FC04A2BDDA6C1003734BD /* CafeToolApp.swift in Sources */,
+				0C7FC07E2BDDA755003734BD /* CoffeeDataModel.swift in Sources */,
+				0C7FC07B2BDDA72B003734BD /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7FC05B2BDDA6C4003734BD /* CafeToolTests.swift in Sources */,
+				0C7FC0802BDDA90B003734BD /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7FC0672BDDA6C4003734BD /* CafeToolUITestsLaunchTests.swift in Sources */,
-				0C7FC0652BDDA6C4003734BD /* CafeToolUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

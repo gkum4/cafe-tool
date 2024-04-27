@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "D364A5DC-8FE1-47AB-A00C-26E61953D50E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:CafeTool.xcodeproj",
+      "identifier" : "0C7FC0452BDDA6C1003734BD",
+      "name" : "CafeTool"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CafeTool.xcodeproj",
+        "identifier" : "0C7FC0552BDDA6C4003734BD",
+        "name" : "CafeToolTests"
+      }
+    }
+  ],
+  "version" : 1
+}
