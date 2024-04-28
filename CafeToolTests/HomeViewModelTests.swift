@@ -8,6 +8,7 @@
 import XCTest
 @testable import CafeTool
 
+@MainActor
 class HomeViewModelTests: XCTestCase {
     var sut: HomeViewModel!
     

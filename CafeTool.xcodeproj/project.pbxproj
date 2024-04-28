@@ -24,13 +24,6 @@
 			remoteGlobalIDString = 0C7FC0452BDDA6C1003734BD;
 			remoteInfo = CafeTool;
 		};
-		0C7FC0612BDDA6C4003734BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C7FC03E2BDDA6C1003734BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0C7FC0452BDDA6C1003734BD;
-			remoteInfo = CafeTool;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +32,6 @@
 		0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7FC0502BDDA6C4003734BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C7FC0562BDDA6C4003734BD /* CafeToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C7FC0602BDDA6C4003734BD /* CafeToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7FC0782BDDA726003734BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0C7FC07A2BDDA72B003734BD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0C7FC07D2BDDA755003734BD /* CoffeeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDataModel.swift; sourceTree = "<group>"; };
@@ -56,13 +48,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0C7FC0532BDDA6C4003734BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7FC05D2BDDA6C4003734BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,7 +72,6 @@
 			children = (
 				0C7FC0462BDDA6C1003734BD /* CafeTool.app */,
 				0C7FC0562BDDA6C4003734BD /* CafeToolTests.xctest */,
-				0C7FC0602BDDA6C4003734BD /* CafeToolUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,24 +191,6 @@
 			productReference = 0C7FC0562BDDA6C4003734BD /* CafeToolTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0C7FC05F2BDDA6C4003734BD /* CafeToolUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0C7FC0702BDDA6C4003734BD /* Build configuration list for PBXNativeTarget "CafeToolUITests" */;
-			buildPhases = (
-				0C7FC05C2BDDA6C4003734BD /* Sources */,
-				0C7FC05D2BDDA6C4003734BD /* Frameworks */,
-				0C7FC05E2BDDA6C4003734BD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0C7FC0622BDDA6C4003734BD /* PBXTargetDependency */,
-			);
-			name = CafeToolUITests;
-			productName = CafeToolUITests;
-			productReference = 0C7FC0602BDDA6C4003734BD /* CafeToolUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,10 +205,6 @@
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					0C7FC0552BDDA6C4003734BD = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 0C7FC0452BDDA6C1003734BD;
-					};
-					0C7FC05F2BDDA6C4003734BD = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 0C7FC0452BDDA6C1003734BD;
 					};
@@ -263,7 +225,6 @@
 			targets = (
 				0C7FC0452BDDA6C1003734BD /* CafeTool */,
 				0C7FC0552BDDA6C4003734BD /* CafeToolTests */,
-				0C7FC05F2BDDA6C4003734BD /* CafeToolUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,13 +240,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0C7FC0542BDDA6C4003734BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0C7FC05E2BDDA6C4003734BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,13 +268,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C7FC05C2BDDA6C4003734BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -328,11 +275,6 @@
 			isa = PBXTargetDependency;
 			target = 0C7FC0452BDDA6C1003734BD /* CafeTool */;
 			targetProxy = 0C7FC0572BDDA6C4003734BD /* PBXContainerItemProxy */;
-		};
-		0C7FC0622BDDA6C4003734BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0C7FC0452BDDA6C1003734BD /* CafeTool */;
-			targetProxy = 0C7FC0612BDDA6C4003734BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -554,42 +496,6 @@
 			};
 			name = Release;
 		};
-		0C7FC0712BDDA6C4003734BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L5C36X97NN;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kumadev.CafeToolUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CafeTool;
-			};
-			name = Debug;
-		};
-		0C7FC0722BDDA6C4003734BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L5C36X97NN;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kumadev.CafeToolUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CafeTool;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -616,15 +522,6 @@
 			buildConfigurations = (
 				0C7FC06E2BDDA6C4003734BD /* Debug */,
 				0C7FC06F2BDDA6C4003734BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0C7FC0702BDDA6C4003734BD /* Build configuration list for PBXNativeTarget "CafeToolUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0C7FC0712BDDA6C4003734BD /* Debug */,
-				0C7FC0722BDDA6C4003734BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
