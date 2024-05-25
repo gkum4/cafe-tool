@@ -30,6 +30,23 @@ class HomeViewModelTests: XCTestCase {
         await sut.fetchCoffees()
         
         // Then
-        XCTAssertFalse(sut.coffees.isEmpty)
+        XCTAssertFalse(sut.coffees.isEmpty, "Deveria popular o array de coffees")
+    }
+    
+    func testSoma1() {
+        let valueA = 10
+        let valueB = 5
+        let expectedResult = 15
+        
+        XCTAssertTrue(sut.soma(a: valueA, b: valueB) == expectedResult)
+    }
+    
+    func testSoma2() {
+        let valueA = 10
+        let valueB = 45
+        let expectedResult = 55
+        
+        XCTAssertTrue(sut.soma(a: valueA, b: valueB) == expectedResult)
     }
 }
+

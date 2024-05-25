@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4A2B232BE67EFC0076066F /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 0C4A2B222BE67EFC0076066F /* FirebaseAppDistribution-Beta */; };
+		0C4A2B252BE67FC30076066F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A2B242BE67FC30076066F /* GoogleService-Info.plist */; };
+		0C4A2B282BEC554B0076066F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A2B272BEC554B0076066F /* DatabaseManager.swift */; };
+		0C4A2B2A2BEC55550076066F /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A2B292BEC55550076066F /* DatabaseManagerProtocol.swift */; };
 		0C7FC04A2BDDA6C1003734BD /* CafeToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FC0492BDDA6C1003734BD /* CafeToolApp.swift */; };
 		0C7FC04E2BDDA6C4003734BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */; };
 		0C7FC0512BDDA6C4003734BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7FC0502BDDA6C4003734BD /* Preview Assets.xcassets */; };
@@ -27,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4A2B242BE67FC30076066F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C4A2B272BEC554B0076066F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		0C4A2B292BEC55550076066F /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
 		0C7FC0462BDDA6C1003734BD /* CafeTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7FC0492BDDA6C1003734BD /* CafeToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeToolApp.swift; sourceTree = "<group>"; };
 		0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4A2B232BE67EFC0076066F /* FirebaseAppDistribution-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4A2B1E2BE67E1C0076066F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A2B242BE67FC30076066F /* GoogleService-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0C4A2B262BEC553B0076066F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A2B2B2BEC557F0076066F /* DatabaseManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0C4A2B2B2BEC557F0076066F /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A2B272BEC554B0076066F /* DatabaseManager.swift */,
+				0C4A2B292BEC55550076066F /* DatabaseManagerProtocol.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
 		0C7FC03D2BDDA6C1003734BD = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +112,8 @@
 		0C7FC0482BDDA6C1003734BD /* CafeTool */ = {
 			isa = PBXGroup;
 			children = (
+				0C4A2B262BEC553B0076066F /* Managers */,
+				0C4A2B1E2BE67E1C0076066F /* Config */,
 				0C7FC0742BDDA709003734BD /* Core */,
 				0C7FC0732BDDA6FF003734BD /* Screens */,
 				0C7FC04D2BDDA6C4003734BD /* Assets.xcassets */,
@@ -169,6 +204,9 @@
 			dependencies = (
 			);
 			name = CafeTool;
+			packageProductDependencies = (
+				0C4A2B222BE67EFC0076066F /* FirebaseAppDistribution-Beta */,
+			);
 			productName = CafeTool;
 			productReference = 0C7FC0462BDDA6C1003734BD /* CafeTool.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +257,9 @@
 				Base,
 			);
 			mainGroup = 0C7FC03D2BDDA6C1003734BD;
+			packageReferences = (
+				0C4A2B212BE67EFC0076066F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0C7FC0472BDDA6C1003734BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +277,7 @@
 			files = (
 				0C7FC0512BDDA6C4003734BD /* Preview Assets.xcassets in Resources */,
 				0C7FC04E2BDDA6C4003734BD /* Assets.xcassets in Resources */,
+				0C4A2B252BE67FC30076066F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +297,8 @@
 			files = (
 				0C7FC0792BDDA726003734BD /* HomeView.swift in Sources */,
 				0C7FC04A2BDDA6C1003734BD /* CafeToolApp.swift in Sources */,
+				0C4A2B2A2BEC55550076066F /* DatabaseManagerProtocol.swift in Sources */,
+				0C4A2B282BEC554B0076066F /* DatabaseManager.swift in Sources */,
 				0C7FC07E2BDDA755003734BD /* CoffeeDataModel.swift in Sources */,
 				0C7FC07B2BDDA72B003734BD /* HomeViewModel.swift in Sources */,
 			);
@@ -527,6 +571,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C4A2B212BE67EFC0076066F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C4A2B222BE67EFC0076066F /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C4A2B212BE67EFC0076066F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C7FC03E2BDDA6C1003734BD /* Project object */;
 }
