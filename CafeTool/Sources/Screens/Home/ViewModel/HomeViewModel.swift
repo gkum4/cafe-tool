@@ -13,9 +13,9 @@ class HomeViewModel: ObservableObject {
     
     func fetchCoffees() async {
         await withCheckedContinuation { continuation in
-            DispatchQueue.global().asyncAfter(deadline: .now() + 2) { [weak self] in
-                DispatchQueue.main.async {
-                    self?.coffees = [
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.async { [self] in
+                    coffees = [
                         CoffeeDataModel(name: "Manifesto", grams: 250, gramsLeft: 50),
                         CoffeeDataModel(name: "Municipal", grams: 500, gramsLeft: 200)
                     ]
