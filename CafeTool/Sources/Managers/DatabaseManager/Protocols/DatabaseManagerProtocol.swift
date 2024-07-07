@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DatabaseManagerProtocol {
-    func saveUser(name: String) async throws
+    func saveUser(name: String) async throws(DatabaseManagerError) -> String
 }
