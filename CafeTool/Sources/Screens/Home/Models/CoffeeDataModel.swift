@@ -8,8 +8,10 @@
 import Foundation
 
 struct CoffeeDataModel: Identifiable {
-    let id = UUID()
+    
+    let id: String
     var name: String
     var grams: Float
     var gramsLeft: Float
+    
 }

@@ -9,47 +9,51 @@ import XCTest
 @testable import CafeTool
 
 class HomeViewModelTests: XCTestCase {
-    var sut: HomeViewModel!
     
-    override func setUp() async throws {
-        try await super.setUp()
+    var sut: HomeViewModel!
+    var coffeeRepository: MockCoffeeRepository!
+    
+    override func setUp() {
+        super.setUp()
         
-        sut = await HomeViewModel()
+        coffeeRepository = MockCoffeeRepository()
+        sut = HomeViewModel(coffeeRepository: coffeeRepository)
     }
     
     override func tearDown() {
         super.tearDown()
+        
+        coffeeRepository = nil
         sut = nil
     }
     
     @MainActor
     func testFetchCoffees_shouldPopulateCoffees() async {
         // Given
-        sut.coffees = []
+        coffeeRepository.fetchCoffeesResult = .success([
+            CoffeeDataModel(id: UUID().uuidString, name: "Coffee1", grams: 1, gramsLeft: 1),
+            CoffeeDataModel(id: UUID().uuidString, name: "Coffee2", grams: 1, gramsLeft: 1),
+            CoffeeDataModel(id: UUID().uuidString, name: "Coffee3", grams: 1, gramsLeft: 1),
+        ])
         
         // When
         await sut.fetchCoffees()
         
         // Then
-        XCTAssertFalse(sut.coffees.isEmpty, "Deveria popular o array de coffees")
+        XCTAssertFalse(sut.coffees.isEmpty, "Deve popular o array de coffees")
     }
     
     @MainActor
-    func testSoma1() {
-        let valueA = 5
-        let valueB = 5
-        let expectedResult = 10
+    func testFetchCoffees_shouldPopulateErrorVariable_onError() async {
+        // Given
+        coffeeRepository.fetchCoffeesResult = .failure(.serverError)
         
-        XCTAssertTrue(sut.soma(a: valueA, b: valueB) == expectedResult)
+        // When
+        await sut.fetchCoffees()
+        
+        // Then
+        XCTAssertNotNil(sut.error, "Deve popular variável de erro")
     }
     
-    @MainActor
-    func testSoma2() {
-        let valueA = 10
-        let valueB = 45
-        let expectedResult = 55
-        
-        XCTAssertTrue(sut.soma(a: valueA, b: valueB) == expectedResult)
-    }
 }
 
