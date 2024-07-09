@@ -7,14 +7,7 @@ let appTarget: Target = .target(
     bundleId: "com.kumadev.CafeTool",
     sources: ["CafeTool/Sources/**"],
     resources: ["CafeTool/Resources/**"],
-    dependencies: [],
-    settings: .settings(
-        configurations: [
-            .debug(name: .debug, xcconfig: .relativeToManifest("./TuistConfig/CafeTool.xcconfig")),
-            .release(name: .release, xcconfig: .relativeToManifest("./TuistConfig/CafeTool.xcconfig"))
-        ],
-        defaultSettings: .none
-    )
+    dependencies: []
 )
 
 let testsTarget: Target = .target(
@@ -25,14 +18,7 @@ let testsTarget: Target = .target(
     infoPlist: .default,
     sources: ["CafeToolTests/**"],
     resources: [],
-    dependencies: [.target(name: "CafeTool")],
-    settings: .settings(
-        configurations: [
-            .debug(name: .debug, xcconfig: .relativeToManifest("./TuistConfig/CafeToolTests.xcconfig")),
-            .release(name: .release, xcconfig: .relativeToManifest("./TuistConfig/CafeToolTests.xcconfig"))
-        ],
-        defaultSettings: .none
-    )
+    dependencies: [.target(name: "CafeTool")]
 )
 
 let project = Project(
