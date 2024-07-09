@@ -7,25 +7,30 @@
 
 import SwiftUI
 
-@MainActor
 class HomeViewModel: ObservableObject {
-    @Published var coffees: [CoffeeDataModel] = []
     
+    @Published private(set) var coffees: [CoffeeDataModel] = []
+    @Published private(set) var error: AppError?
+    
+    private let coffeeRepository: CoffeeRepositoryProtocol
+    
+    init(coffeeRepository: CoffeeRepositoryProtocol = RemoteCoffeeRepository()) {
+        self.coffeeRepository = coffeeRepository
+    }
+    
+    @MainActor
     func fetchCoffees() async {
-        await withCheckedContinuation { continuation in
-            DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-                DispatchQueue.main.async { [self] in
-                    coffees = [
-                        CoffeeDataModel(name: "Manifesto", grams: 250, gramsLeft: 50),
-                        CoffeeDataModel(name: "Municipal", grams: 500, gramsLeft: 200)
-                    ]
-                }
-                continuation.resume()
-            }
+        switch (await coffeeRepository.fetchCoffees()) {
+        case .success(let coffees):
+            self.coffees = coffees
+        case .failure(let error):
+            self.error = error
         }
     }
     
-    func soma(a: Int, b: Int) -> Int {
-        return a + b
+    @MainActor
+    func dismissError() {
+        error = nil
     }
+    
 }

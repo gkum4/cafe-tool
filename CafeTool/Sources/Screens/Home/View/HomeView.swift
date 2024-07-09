@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @StateObject private var viewModel = HomeViewModel()
+    
+    init(viewModel: HomeViewModel = HomeViewModel()) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         List {
@@ -16,18 +21,20 @@ struct HomeView: View {
                 Text("\(coffee.name) - (quantidade: \(coffee.gramsLeft)g/\(coffee.grams)g")
             }
         }
-        .onAppear {
-            Task {
-                await viewModel.fetchCoffees()
-            }
+        .task {
+            await viewModel.fetchCoffees()
         }
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {
     
     static var previews: some View {
-        HomeView()
+        let mockCoffeeRepository = MockCoffeeRepository.createSuccess()
+        let viewModel = HomeViewModel(coffeeRepository: mockCoffeeRepository)
+        
+        return HomeView(viewModel: viewModel)
     }
     
 }
