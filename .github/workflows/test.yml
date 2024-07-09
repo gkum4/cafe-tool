@@ -24,4 +24,4 @@ jobs:
         run: mise use -g tuist@4.10.0
 
       - name: Run tests
-        run: tuist test --no-binary-cache -- "clean test"
+        run: tuist test --no-binary-cache
