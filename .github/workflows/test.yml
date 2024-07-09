@@ -11,17 +11,21 @@ on:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macos-14
 
     steps:
       - uses: actions/checkout@v3
       - uses: jdx/mise-action@v2
 
-      - name: Install Tuist
+      - name: Install and Activate Tuist
         run: mise install tuist@4.10.0
-      
-      - name: Tuist activation
         run: mise use -g tuist@4.10.0
 
-      - name: Run tests
-        run: tuist test --no-binary-cache
+      - name: Build Project
+        run: tuist generate --no-binary-cache
+
+      - name: Select Xcode
+        run: sudo xcode-select -switch /Applications/Xcode_15.4.app && /usr/bin/xcodebuild -version
+
+      - name: Test Project
+        run: xcodebuild test -scheme CafeTool -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=18.0'
