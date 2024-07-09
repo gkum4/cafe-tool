@@ -8,13 +8,13 @@
 import XCTest
 @testable import CafeTool
 
-@MainActor
 class HomeViewModelTests: XCTestCase {
     var sut: HomeViewModel!
     
-    override func setUp() {
-        super.setUp()
-        sut = HomeViewModel()
+    override func setUp() async throws {
+        try await super.setUp()
+        
+        sut = await HomeViewModel()
     }
     
     override func tearDown() {
@@ -22,6 +22,7 @@ class HomeViewModelTests: XCTestCase {
         sut = nil
     }
     
+    @MainActor
     func testFetchCoffees_shouldPopulateCoffees() async {
         // Given
         sut.coffees = []
@@ -33,14 +34,16 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertFalse(sut.coffees.isEmpty, "Deveria popular o array de coffees")
     }
     
+    @MainActor
     func testSoma1() {
-        let valueA = 10
+        let valueA = 5
         let valueB = 5
-        let expectedResult = 15
+        let expectedResult = 10
         
         XCTAssertTrue(sut.soma(a: valueA, b: valueB) == expectedResult)
     }
     
+    @MainActor
     func testSoma2() {
         let valueA = 10
         let valueB = 45
