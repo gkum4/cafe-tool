@@ -18,16 +18,26 @@ struct HomeView: View {
     var body: some View {
         List {
             ForEach(viewModel.coffees) { coffee in
-                Text("\(coffee.name) - (quantidade: \(coffee.gramsLeft)g/\(coffee.grams)g")
+                Text("\(coffee.name) - (qnt: \(coffee.gramsLeft)g/\(coffee.grams)g")
             }
         }
         .task {
             await viewModel.fetchCoffees()
         }
+        .alert(
+            isPresented: Binding(
+                get: { viewModel.error != nil },
+                set: { _ in viewModel.dismissError() }
+            ),
+            error: viewModel.error,
+            actions: { _ in },
+            message: { error in Text(error.localizedDescription) }
+        )
     }
     
 }
 
+#if DEBUG
 struct HomeView_Previews: PreviewProvider {
     
     static var previews: some View {
@@ -38,3 +48,4 @@ struct HomeView_Previews: PreviewProvider {
     }
     
 }
+#endif
