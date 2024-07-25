@@ -24,10 +24,20 @@ struct HomeView: View {
         .task {
             await viewModel.fetchCoffees()
         }
+        .alert(
+            isPresented: Binding(
+                get: { viewModel.error != nil },
+                set: { _ in viewModel.dismissError() }
+            ),
+            error: viewModel.error,
+            actions: { _ in },
+            message: { error in Text(error.localizedDescription) }
+        )
     }
     
 }
 
+#if DEBUG
 struct HomeView_Previews: PreviewProvider {
     
     static var previews: some View {
@@ -38,3 +48,4 @@ struct HomeView_Previews: PreviewProvider {
     }
     
 }
+#endif
