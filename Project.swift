@@ -9,10 +9,7 @@ let appTarget: Target = .target(
     infoPlist: "CafeTool/Info.plist",
     sources: ["CafeTool/Sources/**"],
     resources: ["CafeTool/Resources/**"],
-    dependencies: [
-        .package(product: "FirebaseAppDistribution-Beta")
-    ],
-    environmentVariables: ["IDEPreferLogStreaming": .environmentVariable(value: "YES", isEnabled: true)]
+    dependencies: []
 )
 
 let testsTarget: Target = .target(
@@ -28,11 +25,6 @@ let testsTarget: Target = .target(
 
 let project = Project(
     name: "CafeTool",
-    packages: [
-        .remote(
-            url: "https://github.com/firebase/firebase-ios-sdk.git",
-            requirement: .exact(.init(10, 29, 0))
-        )
-    ],
+    packages: [],
     targets: [appTarget, testsTarget]
 )
