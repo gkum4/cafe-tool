@@ -13,11 +13,6 @@ jobs:
     runs-on: macos-14
 
     steps:
-      - name: Clean Workspace
-        run: |
-          rm -rf $GITHUB_WORKSPACE/* 
-          rm -rf $RUNNER_TEMP/*
-
       - name: Checkout
         uses: actions/checkout@v3
 
