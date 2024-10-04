@@ -19,7 +19,7 @@ jobs:
           rm -rf $RUNNER_TEMP/*
 
       - name: Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Install and Activate Tuist
       - uses: jdx/mise-action@v2
