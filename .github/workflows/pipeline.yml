@@ -17,7 +17,13 @@ jobs:
       - uses: jdx/mise-action@v2
 
       - name: Install and Activate Tuist
-        run: mise install tuist@4.10.0 && mise use -g tuist@4.10.0
+        run: |
+          mise install tuist@4.10.0
+          mise use -g tuist@4.10.0
+
+      - name: Generate project
+        run: |
+          tuist generate --no-binary-cache --no-open
 
       - name: Set Default Scheme
         run: |
